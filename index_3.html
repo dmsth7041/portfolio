@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunso.Lee</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/reset.css">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <div class="site-name"><p>Eunso Lee’s Web</p></div>
+        <div class="menu">
+            <div class="menu-list"><p>About</p><p>Work</p><p>Conntect</p></div>
+            <div class="arrow"><img src="img/arrow.png"></div>
+        </div>
+    </div>
+
+    <div class="onair">On Air <div class="dot"></div></div>
+</header>
+
+<div class="section1">
+    <div class="section1-wrap"><h2>PUBLISH</h2><h2>WORK</h2></div>
+    <h2>INTERACTION</h2>
+    <div class="section1-wrap"><h2>DEVELOPE & DESIGN</h2></div>
+</div>
+
+<div class="background-box">
+    <div class="back-img01"></div>
+    <div class="back-img02"></div>
+</div>
+
+<div class="section2">
+    <div class="title">
+        <h2>Hello, World!</h2>
+        <p>안녕하세요! 1년차 웹 퍼블리셔 이은소입니다.<br>
+            배움에는 끝이 없다는 마음가짐으로 코드와 ux / ui 공부를 하며 디자인과 개발 업무를 진행하고 있습니다.<br>
+            <br>
+            기본적으로 css / Html /  javascript / Jquery를 능숙히 다루며 vue , react .js 와 같은 다양한 라이브러리 코드에도 흥미를 가지고 있습니다. 피그마와 포토샵 & 일러스트레이터로 디자인을 잡을 수 있으며 사용자 친화적이며 시각적으로 다양한 재미를 주는 인터렉션과 인터페이스를 만드는 것을 목표로 삼고 있습니다!
+        </p>
+    </div>
+</div>
+
+<section class="section3">
+    <h2 class="section3-title">PROJECTS</h2>
+
+    <div class="section4-btn">
+        <div class="btn_1"><img src="/img/btn_1.svg" alt=""></div>
+        <div class="btn_2"><img src="/img/btn_2.svg" alt=""></div>
+        </div>
+
+
+<div class="section4 clear">
+
+    <div class="item item1" >
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+
+    <div class="item item2">
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+
+    <div class="item item3">
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+    
+    <div class="item item4">
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+
+    <div class="item item5" >
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+
+    <div class="item item6">
+        <div class="img-min"></div>
+        <div class="item-text">
+        <h2>골드워터 홈페이지</h2>
+        <h3>BRAND PAGE<br>PUBLISH & DEVELPE</h3>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+<div class="shape">
+
+</div>
+
+<footer>
+
+
+</footer>
+      
+
+<script src="js/index.js"></script>
+
+<script>
+    var shape_cnt = 10;
+    var $shape = $(".shape");
+    var mouseX, mouseY, time_1 = 8, time_2 = 8, density = 10;
+ 
+    for (var i = 0; i < shape_cnt; i++) {
+        if (i % 2) {
+            $("<div/>", {id: "item_" + i}).addClass("layer1").appendTo($shape);
+        } else {
+            $("<div/>", {id: "item_" + i}).addClass("layer2").appendTo($shape);
+        }
+    }
+ 
+    function shape_move(e) {
+        mouseX = e.pageX / density;
+        mouseY = e.pageY / density;
+        TweenLite.to(".layer1", time_1, {x: mouseX, y: -mouseY, ease: Power4.easeOut}),
+            TweenLite.to(".layer2", time_2, {x: -mouseX, y: mouseY, ease: Power4.easeOut});
+    }
+ 
+    $('body').on('mousemove', shape_move);
+</script>
+   
+</body>
+
+</html>
